@@ -1,0 +1,29 @@
+{
+    "name": "{{ project_name }}",
+    "description": "",
+    "scripts": {
+        "syncdb": "python manage syncdb --noinput"
+    },
+    "env": {
+        "SECRET_TOKEN": {
+            "description": "A secret key for verifying the integrity of signed cookies.",
+            "generator": "secret"
+        },
+        "WEB_CONCURRENCY": {
+            "description": "The number of processes to run.",
+            "value": "4"
+        },
+        "NEW_RELIC_APP_NAME": {
+            "description": "NewRelic application name",
+            "value": "{{ project_name }}"
+        }
+    },
+    "addons": [
+        "heroku-postgresql",
+        "pgbackups:auto-week",
+        "scheduler",
+        "cloudamqp",
+        "newrelic",
+        "papertrail"
+    ]
+}
