@@ -10,8 +10,14 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os.path import dirname, normpath, abspath, join
 
+# Path Configuration
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+# Absolute filesystem path to the Django project directory:
+DJANGO_ROOT = dirname(dirname(abspath(__file__)))
+# Absolute filesystem path to the top-level project folder:
+SITE_ROOT = dirname(DJANGO_ROOT)
 
 
 # Quick-start development settings - unsuitable for production
@@ -78,3 +84,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Template directories
+# https://docs.djangoproject.com/en/1.7/ref/settings/#template-dirs
+TEMPLATE_DIRS = (
+    normpath(join(SITE_ROOT, 'templates')),
+)
