@@ -26,8 +26,6 @@ SITE_ROOT = dirname(DJANGO_ROOT)
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'lue7#p9*5uq0@g!dh!g0!%x!$xp^)m-6806td__*e-k4*&_szb'
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
