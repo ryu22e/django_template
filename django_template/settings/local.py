@@ -13,3 +13,11 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# django-debug-toolbar
+INSTALLED_APPS += (
+    'debug_toolbar.apps.DebugToolbarConfig',
+)
+MIDDLEWARE_CLASSES += (
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+)
