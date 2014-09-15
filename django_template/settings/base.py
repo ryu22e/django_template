@@ -29,17 +29,22 @@ SECRET_KEY = 'lue7#p9*5uq0@g!dh!g0!%x!$xp^)m-6806td__*e-k4*&_szb'
 
 # Application definition
 
-INSTALLED_APPS = (
+DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+)
+# Apps specific for this project go here.
+LOCAL_APPS = (
     'home',
 )
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
