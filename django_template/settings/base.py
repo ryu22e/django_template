@@ -75,7 +75,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+
+# Static directories
+# https://docs.djangoproject.com/en/1.6/ref/settings/#std:setting-STATICFILES_DIRS
+STATICFILES_DIRS = (
+    normpath(join(SITE_ROOT, 'static')),
+)
+
+# Staticfiles finders
+# https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+)
+
+# Media files
+MEDIA_ROOT = 'media'
+MEDIA_URL = '/media/'
 
 # Template directories
 # https://docs.djangoproject.com/en/1.7/ref/settings/#template-dirs
