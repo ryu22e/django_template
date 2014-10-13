@@ -21,6 +21,9 @@ INSTALLED_APPS += (
 MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
+# http://django-debug-toolbar.readthedocs.org/en/latest/installation.html
+INTERNAL_IPS = ('127.0.0.1',)
+
 
 # MAIL CONFIGURATION
 # https://docs.djangoproject.com/en/1.7/ref/settings/#email-backend
