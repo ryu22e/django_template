@@ -23,6 +23,8 @@ MIDDLEWARE_CLASSES += (
 )
 # http://django-debug-toolbar.readthedocs.org/en/latest/installation.html
 INTERNAL_IPS = ('127.0.0.1',)
+# Tell the toolbar not to adjust your settings automatically by adding this line in your settings module
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
 
 
 # MAIL CONFIGURATION
