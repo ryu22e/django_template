@@ -1,6 +1,7 @@
 from .base import *
 import dj_database_url
 from os import environ
+from urllib.parse import urlparse
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -52,3 +53,17 @@ EMAIL_HOST_PASSWORD = get_env_variable('SENDGRID_PASSWORD')
 EMAIL_PORT = environ.get('EMAIL_PORT', 587)
 # https://docs.djangoproject.com/en/1.7/ref/settings/#email-use-tls
 EMAIL_USE_TLS = True
+
+# CACHE CONFIGURATION
+# https://docs.djangoproject.com/en/1.7/ref/settings/#caches
+redis_url = urlparse(get_env_variable('REDISTOGO_URL'))
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': '%s:%s' % (redis_url.hostname, redis_url.port),
+        'OPTIONS': {
+            'DB': 0,
+            'PASSWORD': redis_url.password,
+        }
+    }
+}

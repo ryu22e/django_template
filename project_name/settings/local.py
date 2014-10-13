@@ -30,3 +30,11 @@ DEBUG_TOOLBAR_PATCH_SETTINGS = False
 # MAIL CONFIGURATION
 # https://docs.djangoproject.com/en/1.7/ref/settings/#email-backend
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# CACHE CONFIGURATION
+# https://docs.djangoproject.com/en/1.7/ref/settings/#caches
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    }
+}
