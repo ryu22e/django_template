@@ -10,7 +10,15 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os import environ
 from os.path import dirname, normpath, abspath, join
+
+
+def get_env_variable(var_name):
+    try:
+        return environ[var_name]
+    except KeyError:
+        error_msg = "Set the {} environment variable".format(var_name)
 
 # Path Configuration
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
