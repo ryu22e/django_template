@@ -21,3 +21,7 @@ INSTALLED_APPS += (
 MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
+
+# MAIL CONFIGURATION
+# https://docs.djangoproject.com/en/1.7/ref/settings/#email-backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

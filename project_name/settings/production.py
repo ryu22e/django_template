@@ -35,3 +35,17 @@ BROKER_CONNECTION_MAX_RETRIES = 0
 BROKER_URL = environ.get('RABBITMQ_URL', environ.get('CLOUDAMQP_URL'))
 # http://docs.celeryproject.org/en/latest/configuration.html#celery-result-backend
 CELERY_RESULT_BACKEND = 'amqp'
+
+# MAIL CONFIGURATION
+# https://docs.djangoproject.com/en/1.7/ref/settings/#email-backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# https://docs.djangoproject.com/en/1.7/ref/settings/#email-host
+EMAIL_HOST = environ.get('EMAIL_HOST', 'smtp.sendgrid.net')
+# https://docs.djangoproject.com/en/1.7/ref/settings/#email-host-user
+EMAIL_HOST_USER = get_env_variable('SENDGRID_USERNAME')
+# https://docs.djangoproject.com/en/1.7/ref/settings/#email-host-password
+EMAIL_HOST_PASSWORD = get_env_variable('SENDGRID_PASSWORD')
+# https://docs.djangoproject.com/en/1.7/ref/settings/#email-port
+EMAIL_PORT = environ.get('EMAIL_PORT', 587)
+# https://docs.djangoproject.com/en/1.7/ref/settings/#email-use-tls
+EMAIL_USE_TLS = True

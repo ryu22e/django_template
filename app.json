@@ -24,6 +24,7 @@
         "scheduler",
         "cloudamqp",
         "newrelic",
-        "papertrail"
+        "papertrail",
+        "sendgrid"
     ]
 }
