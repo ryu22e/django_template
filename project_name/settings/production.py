@@ -7,6 +7,9 @@ DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = get_env_variable('SECRET_TOKEN')
+
 # Allowed hosts
 # https://docs.djangoproject.com/en/1.7/ref/settings/#std:setting-ALLOWED_HOSTS
 ALLOWED_HOSTS = ['*']
