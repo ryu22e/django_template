@@ -2,7 +2,7 @@
     "name": "{{ project_name }}",
     "description": "",
     "scripts": {
-        "syncdb": "python manage syncdb --noinput"
+        "syncdb": "python manage.py syncdb --noinput"
     },
     "env": {
         "SECRET_TOKEN": {
