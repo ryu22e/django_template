@@ -35,6 +35,7 @@ If you want to deploy to `Heroku <https://www.heroku.com/>`_, run the following 
     heroku addons:add papertrail
     heroku addons:add sendgrid
     heroku addons:add redistogo
+    heroku config:add DJANGO_SETTINGS_MODULE="your_project.settings.production"
     heroku config:add SECRET_TOKEN="<A secret key for verifying the integrity of signed cookies.>"
     heroku config:add WEB_CONCURRENCY=4
     heroku config:add NEW_RELIC_APP_NAME=your_project

@@ -16,6 +16,10 @@
         "NEW_RELIC_APP_NAME": {
             "description": "NewRelic application name",
             "value": "{{ project_name }}"
+        },
+        "DJANGO_SETTINGS_MODULE": {
+            "description": "Django settings module",
+            "value": "{{ project_name }}.settings.production"
         }
     },
     "addons": [
