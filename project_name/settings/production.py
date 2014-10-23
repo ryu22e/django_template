@@ -2,6 +2,7 @@ from .base import *
 import dj_database_url
 from os import environ
 from urllib.parse import urlparse
+from django.conf import global_settings
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -17,6 +18,9 @@ ALLOWED_HOSTS = ['*']
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
+
+# https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-STATICFILES_STORAGE
+STATICFILES_STORAGE = global_settings.STATICFILES_STORAGE
 
 # django-celery
 INSTALLED_APPS += ('djcelery', )
