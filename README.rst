@@ -13,7 +13,7 @@ To create a new django_template base project, run the following command (this as
     django-admin.py startproject --template=https://github.com/ryu22e/django_template/archive/master.zip --extension=json,py,rst your_project
     cd your_project
     pip install -r requirements/local.txt
-    python manage.py syncdb --noinput
+    python manage.py migrate --noinput
     python manage.py runserver
 
 Deploying to Heroku
@@ -41,7 +41,7 @@ If you want to deploy to `Heroku <https://www.heroku.com/>`_, run the following 
     heroku config:add NEW_RELIC_APP_NAME=your_project
 
     git push heroku master
-    heroku run "python manage.py syncdb --noinput"
+    heroku run "python manage.py migrate --noinput"
 
     heroku open
 
