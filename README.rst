@@ -28,7 +28,6 @@ If you want to deploy to `Heroku <https://www.heroku.com/>`_, run the following 
 
     heroku apps:create your_project
     heroku addons:add heroku-postgresql
-    heroku addons:add pgbackups:auto-week
     heroku addons:add scheduler
     heroku addons:add cloudamqp
     heroku addons:add newrelic

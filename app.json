@@ -24,7 +24,6 @@
     },
     "addons": [
         "heroku-postgresql",
-        "pgbackups:auto-week",
         "scheduler",
         "cloudamqp",
         "newrelic",
