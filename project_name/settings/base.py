@@ -104,8 +104,22 @@ STATICFILES_FINDERS = (
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
 
-# Template directories
-# https://docs.djangoproject.com/en/1.7/ref/settings/#template-dirs
-TEMPLATE_DIRS = (
-    normpath(join(SITE_ROOT, 'templates')),
-)
+# Templates configuration
+# https://docs.djangoproject.com/en/1.8/topics/templates/#configuration
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            normpath(join(SITE_ROOT, 'templates')),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
