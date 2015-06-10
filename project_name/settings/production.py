@@ -13,7 +13,7 @@ TEMPLATE_DEBUG = DEBUG
 SECRET_KEY = get_env_variable('SECRET_TOKEN')
 
 # Allowed hosts
-# https://docs.djangoproject.com/en/1.7/ref/settings/#std:setting-ALLOWED_HOSTS
+# https://docs.djangoproject.com/en/1.8/ref/settings/#std:setting-ALLOWED_HOSTS
 ALLOWED_HOSTS = ['*']
 
 DATABASES = {}
@@ -45,21 +45,21 @@ BROKER_URL = environ.get('RABBITMQ_URL', environ.get('CLOUDAMQP_URL'))
 CELERY_RESULT_BACKEND = 'amqp'
 
 # MAIL CONFIGURATION
-# https://docs.djangoproject.com/en/1.7/ref/settings/#email-backend
+# https://docs.djangoproject.com/en/1.8/ref/settings/#email-backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# https://docs.djangoproject.com/en/1.7/ref/settings/#email-host
+# https://docs.djangoproject.com/en/1.8/ref/settings/#email-host
 EMAIL_HOST = environ.get('EMAIL_HOST', 'smtp.sendgrid.net')
-# https://docs.djangoproject.com/en/1.7/ref/settings/#email-host-user
+# https://docs.djangoproject.com/en/1.8/ref/settings/#email-host-user
 EMAIL_HOST_USER = get_env_variable('SENDGRID_USERNAME')
-# https://docs.djangoproject.com/en/1.7/ref/settings/#email-host-password
+# https://docs.djangoproject.com/en/1.8/ref/settings/#email-host-password
 EMAIL_HOST_PASSWORD = get_env_variable('SENDGRID_PASSWORD')
-# https://docs.djangoproject.com/en/1.7/ref/settings/#email-port
+# https://docs.djangoproject.com/en/1.8/ref/settings/#email-port
 EMAIL_PORT = environ.get('EMAIL_PORT', 587)
-# https://docs.djangoproject.com/en/1.7/ref/settings/#email-use-tls
+# https://docs.djangoproject.com/en/1.8/ref/settings/#email-use-tls
 EMAIL_USE_TLS = True
 
 # CACHE CONFIGURATION
-# https://docs.djangoproject.com/en/1.7/ref/settings/#caches
+# https://docs.djangoproject.com/en/1.8/ref/settings/#caches
 redis_url = urlparse(get_env_variable('REDISTOGO_URL'))
 CACHES = {
     'default': {

@@ -5,7 +5,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -28,11 +28,11 @@ DEBUG_TOOLBAR_PATCH_SETTINGS = False
 
 
 # MAIL CONFIGURATION
-# https://docs.djangoproject.com/en/1.7/ref/settings/#email-backend
+# https://docs.djangoproject.com/en/1.8/ref/settings/#email-backend
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # CACHE CONFIGURATION
-# https://docs.djangoproject.com/en/1.7/ref/settings/#caches
+# https://docs.djangoproject.com/en/1.8/ref/settings/#caches
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
