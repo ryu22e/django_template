@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 from os import environ
 from os.path import dirname, normpath, abspath, join
+from django.core.exceptions import ImproperlyConfigured
 
 
 def get_env_variable(var_name):
@@ -19,6 +20,7 @@ def get_env_variable(var_name):
         return environ[var_name]
     except KeyError:
         error_msg = "Set the {} environment variable".format(var_name)
+        raise ImproperlyConfigured(error_msg)
 
 # Path Configuration
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
