@@ -27,13 +27,13 @@ If you want to deploy to `Heroku <https://www.heroku.com/>`_, run the following 
     git commit -am "Initial commit"
 
     heroku apps:create your_project
-    heroku addons:add heroku-postgresql
-    heroku addons:add scheduler
-    heroku addons:add cloudamqp
-    heroku addons:add newrelic
-    heroku addons:add papertrail
-    heroku addons:add sendgrid
-    heroku addons:add redistogo
+    heroku addons:create heroku-postgresql
+    heroku addons:create scheduler
+    heroku addons:create cloudamqp
+    heroku addons:create newrelic
+    heroku addons:create papertrail
+    heroku addons:create sendgrid
+    heroku addons:create redistogo
     heroku config:add DJANGO_SETTINGS_MODULE="your_project.settings.production"
     heroku config:add SECRET_TOKEN="<A secret key for verifying the integrity of signed cookies.>"
     heroku config:add WEB_CONCURRENCY=4
