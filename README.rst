@@ -33,6 +33,7 @@ If you want to deploy to `Heroku <https://www.heroku.com/>`_, run the following 
     heroku addons:create newrelic
     heroku addons:create papertrail
     heroku addons:create sendgrid
+    heroku addons:create process-scheduler
     heroku addons:create redistogo
     heroku config:add DJANGO_SETTINGS_MODULE="your_project.settings.production"
     heroku config:add SECRET_TOKEN="<A secret key for verifying the integrity of signed cookies.>"

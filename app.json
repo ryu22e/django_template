@@ -29,6 +29,7 @@
         "newrelic",
         "papertrail",
         "sendgrid",
+        "process-scheduler",
         "redistogo"
     ]
 }
