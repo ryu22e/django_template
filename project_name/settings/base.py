@@ -34,6 +34,7 @@ SITE_ROOT = dirname(DJANGO_ROOT)
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# https://docs.djangoproject.com/en/1.8/ref/settings/#std:setting-SECRET_KEY
 SECRET_KEY = '{{ secret_key }}'
 
 
