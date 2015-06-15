@@ -13,6 +13,7 @@ TEMPLATE_DEBUG = DEBUG
 SECRET_KEY = get_env_variable('SECRET_TOKEN')
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
+# https://docs.djangoproject.com/en/1.8/ref/settings/#secure-proxy-ssl-header
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allowed hosts
