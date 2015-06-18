@@ -124,3 +124,11 @@ TEMPLATES = [
         },
     },
 ]
+
+# celery
+# http://celery.readthedocs.org/en/latest/configuration.html#celery-task-serializer
+CELERY_TASK_SERIALIZER = 'json'
+# http://celery.readthedocs.org/en/latest/configuration.html#celery-result-serializer
+CELERY_RESULT_SERIALIZER = 'json'
+# http://celery.readthedocs.org/en/latest/configuration.html#celery-accept-content
+CELERY_ACCEPT_CONTENT = ['json']

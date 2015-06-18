@@ -1,3 +1,3 @@
 web: newrelic-admin run-program gunicorn --workers $WEB_CONCURRENCY wsgi --log-file -
-scheduler: python manage.py celery worker -B -E --maxtasksperchild=1000
-worker: python manage.py celery worker -E --maxtasksperchild=1000
+scheduler: celery beat -A $CELERY_APP_NAME -l info
+worker: celery worker -A $CELERY_APP_NAME -l info

@@ -76,3 +76,9 @@ CACHES = {
         }
     }
 }
+
+# celery
+# http://celery.readthedocs.org/en/latest/configuration.html#broker-url
+BROKER_URL = get_env_variable('CLOUDAMQP_URL')
+# http://celery.readthedocs.org/en/latest/configuration.html#celery-result-backend
+CELERY_RESULT_BACKEND = 'redis'
