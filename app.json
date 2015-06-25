@@ -17,7 +17,7 @@
             "description": "NewRelic application name",
             "value": "{{ project_name }}"
         },
-        "CELERY_APP_NAME": {
+        "CELERY_APP": {
             "description": "Application name for celery(DO NOT EDIT)",
             "value": "{{ project_name }}"
         },
