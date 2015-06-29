@@ -44,3 +44,7 @@ Desktop.ini
 # Django
 staticfiles
 media
+
+# celery
+celerybeat-schedule
+celerybeat.pid
