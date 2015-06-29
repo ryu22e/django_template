@@ -27,28 +27,6 @@ DATABASES['default'] = dj_database_url.config()
 # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-STATICFILES_STORAGE
 STATICFILES_STORAGE = global_settings.STATICFILES_STORAGE
 
-# django-celery
-INSTALLED_APPS += ('djcelery', )
-# http://docs.celeryproject.org/en/latest/configuration.html#broker-transport
-BROKER_TRANSPORT = 'amqplib'
-# Set this number to the amount of allowed concurrent connections on your AMQP
-# provider, divided by the amount of active workers you have.
-#
-# For example, if you have the 'Little Lemur' CloudAMQP plan (their free tier),
-# they allow 3 concurrent connections. So if you run a single worker, you'd
-# want this number to be 3. If you had 3 workers running, you'd lower this
-# number to 1, since 3 workers each maintaining one open connection = 3
-# connections total.
-#
-# http://docs.celeryproject.org/en/latest/configuration.html#broker-pool-limit
-BROKER_POOL_LIMIT = 3
-# http://docs.celeryproject.org/en/latest/configuration.html#broker-connection-max-retries
-BROKER_CONNECTION_MAX_RETRIES = 0
-# http://docs.celeryproject.org/en/latest/configuration.html#broker-url
-BROKER_URL = environ.get('RABBITMQ_URL', environ.get('CLOUDAMQP_URL'))
-# http://docs.celeryproject.org/en/latest/configuration.html#celery-result-backend
-CELERY_RESULT_BACKEND = 'amqp'
-
 # MAIL CONFIGURATION
 # https://docs.djangoproject.com/en/1.8/ref/settings/#email-backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -76,3 +54,9 @@ CACHES = {
         }
     }
 }
+
+# celery
+# http://celery.readthedocs.org/en/latest/configuration.html#broker-url
+BROKER_URL = get_env_variable('CLOUDAMQP_URL')
+# http://celery.readthedocs.org/en/latest/configuration.html#celery-result-backend
+CELERY_RESULT_BACKEND = 'redis'

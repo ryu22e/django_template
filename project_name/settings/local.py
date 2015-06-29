@@ -14,8 +14,10 @@ DATABASES = {
     }
 }
 
-# django-debug-toolbar
 INSTALLED_APPS += (
+    # celery
+    'kombu.transport.django',
+    # django-debug-toolbar
     'debug_toolbar.apps.DebugToolbarConfig',
 )
 MIDDLEWARE_CLASSES += (
@@ -38,3 +40,11 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
     }
 }
+
+# celery
+# http://celery.readthedocs.org/en/latest/configuration.html#broker-url
+BROKER_URL = environ.get('BROKER_URL', 'django://')
+# http://celery.readthedocs.org/en/latest/configuration.html#celery-result-backend
+CELERY_RESULT_BACKEND = 'db+sqlite:///' + os.path.join(BASE_DIR, 'celery.db')
+# http://celery.readthedocs.org/en/latest/configuration.html#celery-redirect-stdouts-level
+CELERY_REDIRECT_STDOUTS_LEVEL = 'DEBUG'
