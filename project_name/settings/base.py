@@ -132,3 +132,11 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 # http://celery.readthedocs.org/en/latest/configuration.html#celery-accept-content
 CELERY_ACCEPT_CONTENT = ['json']
+# http://celery.readthedocs.org/en/latest/configuration.html#std:setting-CELERYBEAT_SCHEDULE
+CELERYBEAT_SCHEDULE = {
+    #'add-every-30-seconds': {
+    #    'task': 'example.tasks.add',
+    #    'schedule': timedelta(seconds=30),
+    #    'args': (16, 16),
+    #},
+}
