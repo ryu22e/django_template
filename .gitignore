@@ -48,3 +48,6 @@ media
 # celery
 celerybeat-schedule
 celerybeat.pid
+
+# Sphinx documentation
+docs/_build/
