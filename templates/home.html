@@ -1,5 +1,20 @@
 {% extends "common/base.html" %}
 
 {% block content %}
-    <h1>Hello!</h1>
+<div id="summary">
+  <h1>It worked!</h1>
+  <h2>Congratulations on your first Django-powered page.</h2>
+</div>
+
+<div id="instructions">
+  <p>
+    Of course, you haven't actually done any work yet. Next, start your first app by running <code>python manage.py startapp [app_label]</code>.
+  </p>
+</div>
+
+<div id="explanation">
+  <p>
+    You're seeing this message because you have <code>DEBUG = True</code> in your Django settings file and you haven't configured any URLs. Get to work!
+  </p>
+</div>
 {% endblock %}
