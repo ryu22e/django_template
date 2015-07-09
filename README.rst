@@ -3,6 +3,9 @@ django_template
 
 A project template for Django 1.8.x.
 
+.. image:: https://circleci.com/gh/ryu22e/django_template.svg?style=svg
+    :target: https://circleci.com/gh/ryu22e/django_template
+
 Installation
 ------------
 
