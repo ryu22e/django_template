@@ -1,0 +1,16 @@
+machine:
+  python:
+    version: 3.4.2
+  environment:
+    PROJECT_NAME: your_project
+dependencies:
+  override:
+    - pip install Django>=1.8.3
+test:
+  override:
+    - cd $HOME
+    - django-admin.py startproject --template=$HOME/django_template --extension=json,py,rst $PROJECT_NAME
+    - cd $PROJECT_NAME
+    - pip install -r requirements/local.txt
+    - python manage.py migrate --noinput
+    - python manage.py test -v2
