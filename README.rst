@@ -25,6 +25,7 @@ Deploying to Heroku
 If you want to deploy to `Heroku <https://www.heroku.com/>`_, run the following command::
 
     cd /path/to/your_project
+    rm circle.yml
     git init
     git add .
     git commit -am "Initial commit"
