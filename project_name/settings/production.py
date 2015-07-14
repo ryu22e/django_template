@@ -37,7 +37,7 @@ EMAIL_HOST_USER = get_env_variable('SENDGRID_USERNAME')
 # https://docs.djangoproject.com/en/1.8/ref/settings/#email-host-password
 EMAIL_HOST_PASSWORD = get_env_variable('SENDGRID_PASSWORD')
 # https://docs.djangoproject.com/en/1.8/ref/settings/#email-port
-EMAIL_PORT = environ.get('EMAIL_PORT', 587)
+EMAIL_PORT = int(environ.get('EMAIL_PORT', '587'))
 # https://docs.djangoproject.com/en/1.8/ref/settings/#email-use-tls
 EMAIL_USE_TLS = True
 
