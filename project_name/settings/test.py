@@ -9,3 +9,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'default.db'),
     }
 }
+
+# celery
+# http://docs.celeryproject.org/en/latest/configuration.html#celery-always-eager
+CELERY_ALWAYS_EAGER = True
