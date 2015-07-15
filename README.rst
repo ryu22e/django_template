@@ -19,6 +19,15 @@ To create a new django_template base project, run the following command (this as
     python manage.py migrate --noinput
     python manage.py runserver
 
+Running tests
+-------------
+
+To run tests, run the following command::
+
+    cd your_project
+    python manage.py test --settings your_project.settings.test
+
+
 Deploying to Heroku
 -------------------
 
