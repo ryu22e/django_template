@@ -7,8 +7,6 @@ from django.conf import global_settings
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-TEMPLATE_DEBUG = DEBUG
-
 # SECURITY WARNING: keep the secret key used in production secret!
 # https://docs.djangoproject.com/en/1.8/ref/settings/#std:setting-SECRET_KEY
 SECRET_KEY = get_env_variable('SECRET_TOKEN')
