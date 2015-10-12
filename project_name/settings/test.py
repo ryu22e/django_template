@@ -7,6 +7,12 @@ logging.disable(logging.CRITICAL)
 # Disable Debug mode, Because this doesn't need to run tests.
 DEBUG = False
 
+INSTALLED_APPS += (
+    'django_jenkins',
+)
+
+PROJECT_APPS = LOCAL_APPS
+
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 DATABASES = {

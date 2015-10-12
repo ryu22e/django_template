@@ -1,3 +1,4 @@
 -r base.in
 factory_boy
 SQLAlchemy
+django-jenkins
