@@ -45,6 +45,9 @@ Desktop.ini
 staticfiles
 media
 
+# django-jenkins
+reports/
+
 # celery
 celerybeat-schedule
 celerybeat.pid
