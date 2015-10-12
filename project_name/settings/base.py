@@ -73,6 +73,10 @@ WSGI_APPLICATION = 'wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#secure-content-type-nosniff
 SECURE_CONTENT_TYPE_NOSNIFF = True
 
+# The SecurityMiddleware sets the X-Content-Type-Options:nosniff.
+# https://docs.djangoproject.com/en/1.8/ref/settings/#secure-browser-xss-filter
+SECURE_BROWSER_XSS_FILTER = True
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
