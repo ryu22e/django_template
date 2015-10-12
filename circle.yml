@@ -11,4 +11,4 @@ dependencies:
     - pip install pip-tools
 test:
   override:
-    - cd $HOME && django-admin.py startproject --template=$HOME/django_template --extension=json,py,rst $PROJECT_NAME && cd $PROJECT_NAME && invoke pip_compile_all && pip-sync requirements/test.txt && python manage.py migrate --noinput && python manage.py test -v2 --settings ${PROJECT_NAME}.settings.test
+    - cd $HOME && django-admin.py startproject --template=$HOME/django_template --extension=json,py,rst $PROJECT_NAME && cd $PROJECT_NAME && invoke pip_compile_all && pip-sync requirements/test.txt && python manage.py test -v2 --settings ${PROJECT_NAME}.settings.test
