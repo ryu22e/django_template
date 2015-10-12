@@ -15,6 +15,21 @@ SECRET_KEY = get_env_variable('SECRET_TOKEN')
 # https://docs.djangoproject.com/en/1.8/ref/settings/#secure-proxy-ssl-header
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+# The SecurityMiddleware redirects all non-HTTPS requests to HTTPS 
+# https://docs.djangoproject.com/en/1.8/ref/settings/#std:setting-SECURE_SSL_REDIRECT
+# Uncomment if your project is https only.
+# SECURE_SSL_REDIRECT = True
+
+# The cookie will be marked as “secure".
+# https://docs.djangoproject.com/en/1.8/ref/settings/#session-cookie-secure
+# Uncomment if your project is https only.
+# SESSION_COOKIE_SECURE = True
+
+# The CSRF cookie will be marked as “secure".
+# https://docs.djangoproject.com/en/1.8/ref/settings/#csrf-cookie-secure
+# Uncomment if your project is https only.
+# CSRF_COOKIE_SECURE = True
+
 # Allowed hosts
 # https://docs.djangoproject.com/en/1.8/ref/settings/#std:setting-ALLOWED_HOSTS
 ALLOWED_HOSTS = ['*']
