@@ -1,4 +1,8 @@
 from .base import *  # NOQA
+import logging
+
+# Disable logging, Because this doesn't need to run tests.
+logging.disable(logging.CRITICAL)
 
 # Disable Debug mode, Because this doesn't need to run tests.
 DEBUG = False
