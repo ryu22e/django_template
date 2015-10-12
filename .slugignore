@@ -2,3 +2,4 @@ README.rst
 LICENSE.txt
 docs/
 circle.yml
+tasks.py
