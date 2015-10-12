@@ -1,5 +1,8 @@
 from .base import *  # NOQA
 
+# Disable Debug mode, Because this doesn't need to run tests.
+DEBUG = False
+
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
