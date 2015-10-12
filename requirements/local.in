@@ -4,3 +4,4 @@ factory_boy
 SQLAlchemy
 Sphinx
 django-jenkins
+flake8

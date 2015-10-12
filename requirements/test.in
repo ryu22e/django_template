@@ -3,3 +3,4 @@ factory_boy
 SQLAlchemy
 django-jenkins
 coverage<4.0
+flake8

@@ -13,6 +13,10 @@ INSTALLED_APPS += (
 
 PROJECT_APPS = LOCAL_APPS
 
+JENKINS_TASKS = (
+    'django_jenkins.tasks.run_flake8',
+)
+
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 DATABASES = {
