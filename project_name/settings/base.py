@@ -68,12 +68,13 @@ ROOT_URLCONF = '{{ project_name }}.urls'
 
 WSGI_APPLICATION = 'wsgi.application'
 
-# The SecurityMiddleware sets the X-Content-Type-Options:
-# nosniff header on all responses that do not already have it.
+# The SecurityMiddleware sets the X-Content-Type-Options: nosniff header
+# on all responses that do not already have it.
 # https://docs.djangoproject.com/en/1.8/ref/settings/#secure-content-type-nosniff
 SECURE_CONTENT_TYPE_NOSNIFF = True
 
-# The SecurityMiddleware sets the X-Content-Type-Options:nosniff.
+# The SecurityMiddleware sets the X-XSS-Protection: 1; mode=block header
+# on all responses that do not already have it.
 # https://docs.djangoproject.com/en/1.8/ref/settings/#secure-browser-xss-filter
 SECURE_BROWSER_XSS_FILTER = True
 
