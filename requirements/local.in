@@ -3,3 +3,4 @@ django-debug-toolbar
 factory_boy
 SQLAlchemy
 Sphinx
+django-jenkins
