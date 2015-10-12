@@ -1,0 +1,8 @@
+-r base.in
+dj-database-url
+psycopg2
+newrelic
+django-celery
+gunicorn
+django-redis-cache
+redis

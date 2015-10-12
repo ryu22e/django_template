@@ -1,0 +1,6 @@
+Django
+dj-static
+django-model-utils
+django-braces
+celery
+pip-tools

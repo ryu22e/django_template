@@ -5,7 +5,9 @@ machine:
     PROJECT_NAME: your_project
 dependencies:
   override:
+    - pip install -U pip
     - pip install "Django>=1.8.3,<1.9.0"
+    - pip install pip-tools
 test:
   override:
-    - cd $HOME && django-admin.py startproject --template=$HOME/django_template --extension=json,py,rst $PROJECT_NAME && cd $PROJECT_NAME && pip install -r requirements/local.txt && python manage.py migrate --noinput && python manage.py test -v2 --settings ${PROJECT_NAME}.settings.test
+      - cd $HOME && django-admin.py startproject --template=$HOME/django_template --extension=json,py,rst $PROJECT_NAME && cd $PROJECT_NAME && pip-compile requirements/local.in && pip-sync requirements/local.txt && python manage.py migrate --noinput && python manage.py test -v2 --settings ${PROJECT_NAME}.settings.test
