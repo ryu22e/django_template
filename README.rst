@@ -33,7 +33,7 @@ Running tests
 
 To run tests, run the following command::
 
-    cd your_project
+    cd /path/to/your_project
     python manage.py test --settings your_project.settings.test
 
 
