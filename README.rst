@@ -25,6 +25,7 @@ Updating Python packages
 
 To update python packages, run the following command::
 
+    cd /path/to/your_project
     invoke pip_compile_all
 
 Running tests
