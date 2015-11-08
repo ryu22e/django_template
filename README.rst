@@ -9,7 +9,7 @@ A project template for Django 1.8.x.
 Installation
 ------------
 
-django_template supports Django 1.8.x and Python 3.4.x.
+django_template supports Django 1.8.x and Python 3.5.x.
 
 To create a new django_template base project, run the following command (this assumes you have Django 1.8.x installed already)::
 
