@@ -7,10 +7,8 @@ dependencies:
   override:
     - pip install -U pip
     - pip install "Django>=1.8.3,<1.9.0"
-    - pip install invoke
-    - pip install pip-tools
 test:
   override:
-    - cd $HOME && django-admin.py startproject --template=$HOME/django_template --extension=json,py,rst $PROJECT_NAME && cd $PROJECT_NAME && invoke pip_compile_all && pip-sync requirements/test.txt && python manage.py jenkins -v2 --settings ${PROJECT_NAME}.settings.test --enable-coverage --coverage-format=html
+    - cd $HOME && django-admin.py startproject --template=$HOME/django_template --extension=json,py,rst $PROJECT_NAME && cd $PROJECT_NAME && pip install -r requirements/test.txt && python manage.py jenkins -v2 --settings ${PROJECT_NAME}.settings.test --enable-coverage --coverage-format=html
   post:
     - mv $HOME/$PROJECT_NAME/reports $CIRCLE_ARTIFACTS

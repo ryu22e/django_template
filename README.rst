@@ -15,11 +15,16 @@ To create a new django_template base project, run the following command (this as
 
     django-admin.py startproject --template=https://github.com/ryu22e/django_template/archive/master.zip --extension=json,py,rst your_project
     cd your_project
-    pip install pip-tools invoke
-    invoke pip_compile_all
-    pip-sync requirements/local.txt
+    pip install -r requirements/local.txt
     python manage.py migrate --noinput
     python manage.py runserver
+
+Updating Python packages
+------------------------
+
+To update python packages, run the following command::
+
+    invoke pip_compile_all
 
 Running tests
 -------------
